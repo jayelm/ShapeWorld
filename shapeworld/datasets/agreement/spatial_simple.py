@@ -11,7 +11,8 @@ class SpatialSimple(CaptionAgreementDataset):
         test_combinations=(('rectangle', 'yellow', 'solid'), ('cross', 'magenta', 'solid'), ('ellipse', 'cyan', 'solid')),
         caption_size=12,
         vocabulary=('.', 'a', 'above', 'an', 'below', 'blue', 'circle', 'cross', 'cyan', 'ellipse', 'gray', 'green', 'is', 'left', 'magenta', 'of', 'pentagon', 'rectangle', 'red', 'right', 'semicircle', 'shape', 'square', 'the', 'to', 'triangle', 'yellow'),
-        language=None
+        language=None,
+        **kwargs
     ):
 
         world_generator = RandomAttributesGenerator(
@@ -39,7 +40,8 @@ class SpatialSimple(CaptionAgreementDataset):
             world_captioner=world_captioner,
             caption_size=caption_size,
             vocabulary=vocabulary,
-            language=language
+            language=language,
+            **kwargs
         )
 
 

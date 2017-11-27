@@ -130,7 +130,7 @@ class GenericGenerator(WorldGenerator):
                     last_entity = None
         if n < self.num_entities:
             for _ in range(self.num_entities * self.__class__.MAX_ATTEMPTS):
-                entity = self.sample_entity(world=world, last_entity=last_entity)
+                entity = self.sample_entity(world=world, last_entity=last_entity, combinations=self.validation_combinations)
                 if world.add_entity(entity, boundary_tolerance=self.boundary_tolerance, collision_tolerance=self.collision_tolerance):
                     last_entity = entity
                     n += 1
